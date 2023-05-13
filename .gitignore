@@ -1,4 +1,5 @@
 # default
+.DS_Store
 .idea
 .vscode
 main
