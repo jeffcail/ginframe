@@ -1,0 +1,13 @@
+GinAppDebug: true
+GinAppName: gin-app
+
+Http:
+  BindPort: 9091
+  LogPath: ./log/gin-app.log
+
+Mysql:
+  DbDsn:
+
+Redis:
+  Username:
+  Password:
