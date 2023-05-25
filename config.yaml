@@ -1,9 +1,9 @@
 GinAppDebug: true
-GinAppName: gin-app
+GinAppName: ginframe
 
 Http:
   BindPort: 9091
-  LogPath: ./log/gin-app.log
+  LogPath: ./log/ginframe.log
 
 Mysql:
   DbDsn:

@@ -35,8 +35,9 @@ type Redis struct {
 }
 
 var (
-	Config *GoAppConfig
-	once   sync.Once
+	Config    *GoAppConfig
+	once      sync.Once
+	AppConfig *Application
 )
 
 func NewGoAppConfig() {
@@ -45,4 +46,16 @@ func NewGoAppConfig() {
 
 func new() {
 	Config = &GoAppConfig{}
+}
+
+type Application struct {
+	ConfigRemote bool `json:"config_remote"`
+}
+
+func NewApplicationConfig() {
+	once.Do(newApp)
+}
+
+func newApp() {
+	AppConfig = &Application{}
 }
