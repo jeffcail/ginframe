@@ -17,6 +17,13 @@ var (
 	cf      string
 )
 
+var (
+	ip    = flag.String("ip", "127.0.0.1", "The nacos of ip address")
+	port  = flag.Int("p", 7848, "The nacos of port")
+	cfg   = flag.String("c", "config.yml", "The nacos of Data ID")
+	group = flag.String("g", "ginframe", "The nacos of Group")
+)
+
 func init() {
 
 	RootDir, err = os.Getwd()
@@ -26,7 +33,7 @@ func init() {
 
 	appConf := fmt.Sprintf("%s%s", RootDir, "/application.yml")
 	global.NewApplicationConfig()
-	config.ParseConfig(appConf, &global.AppConfig)
+	config.ParseConfig(appConf, global.AppConfig)
 
 	switch global.AppConfig.ConfigRemote {
 	case false:
@@ -35,22 +42,15 @@ func init() {
 		config.ParseConfig(cf, &global.Config)
 		break
 	default:
-		loadRemoteConfig()
+		flag.Parse()
+		loadRemoteConfig(*ip, *port, *cfg, *group, &global.Config)
 		break
 	}
 
 }
 
-var (
-	ip    = flag.String("ip", "ip", "The nacos of ip address")
-	port  = flag.Int("p", 0, "The nacos of port")
-	cfg   = flag.String("c", "default", "The nacos of Data ID")
-	group = flag.String("g", "default", "The nacos of Group")
-)
-
-func loadRemoteConfig() {
-	flag.Parse()
-	config.LoadCoreConfig(*ip, *port, *cfg, *group, global.Config)
+func loadRemoteConfig(ip string, port int, cfg string, group string, configs interface{}) {
+	config.LoadCoreConfig(ip, port, cfg, group, configs)
 }
 
 // Init 项目初始化
@@ -72,6 +72,6 @@ func Init() {
 
 	select {
 	case err = <-errs:
-		log.Fatalf("Run server err: %v")
+		log.Fatalf("Run server err: %v", err)
 	}
 }

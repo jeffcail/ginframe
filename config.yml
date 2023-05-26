@@ -8,6 +8,9 @@ Http:
 Websocket:
   BindPort: 9092
 
+Grpc:
+  Port: 9093
+
 Mysql:
   DbDsn:
 
