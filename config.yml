@@ -20,3 +20,6 @@ Redis:
   Addr: 127.0.0.1:6379
   Password: 123456
   Db: 0
+
+Mongo:
+  Addr: mongodb://test:123456@127.0.0.1:27017/ginframe

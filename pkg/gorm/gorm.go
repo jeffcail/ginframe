@@ -10,7 +10,6 @@ import (
 )
 
 // InitGormMysql gorm 初始化mysql连接
-// eg: root:123456@tcp(127.0.0.1:3306)/jiaxiao?charset=utf8mb4&parseTime=True&loc=Local
 func InitGormMysql(dsn string, args ...[]int) (*gorm.DB, error) {
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		SkipDefaultTransaction: false,

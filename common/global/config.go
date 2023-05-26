@@ -19,6 +19,7 @@ type GlobalConfig struct {
 	Grpc        Grpc      `json:"grpc"`
 	Mysql       Mysql     `json:"mysql"`
 	Redis       Redis     `json:"redis"`
+	Mongo       Mongo     `json:"mongo"`
 }
 
 // Http http服务配置
@@ -49,6 +50,11 @@ type Redis struct {
 	Addr     string `json:"addr"`
 	Password string `json:"password"`
 	Db       int    `json:"db"`
+}
+
+// Mongo mongo配置
+type Mongo struct {
+	Addr string `json:"addr"`
 }
 
 var (

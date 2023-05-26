@@ -6,4 +6,5 @@ import "github.com/jeffcail/ginframe/core/db"
 func InitDb() {
 	db.InitDb()
 	db.InitRedisClient()
+	db.InitMongo()
 }
