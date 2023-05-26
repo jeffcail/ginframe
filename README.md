@@ -7,8 +7,9 @@
     - [技术点对应文档](#技术点对应文档)
     - [职责](#职责)
       - [1. 文件配置](#文件配置)
-      - [2. 路由](#路由)
-      - [3. api返回统一格式](#api返回统一格式)
+      - [2. api路由](#api路由)
+      - [3. websocket路由](#websocket路由)
+      - [4. api返回统一格式](#api返回统一格式)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -48,8 +49,11 @@ go run main.go
 application.yml为主配置文件.ConfigRemote觉得是否启用远程配置，支持Nacos.
 config.yml 为应用配置
 
-### 路由
+### api路由
 http路由 
+
+### websocket路由
+websocket路由
 
 ### api返回统一格式
 成功、失败、分页

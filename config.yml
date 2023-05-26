@@ -5,6 +5,9 @@ Http:
   BindPort: 9091
   LogPath: ./log/ginframe.log
 
+Websocket:
+  BindPort: 9092
+
 Mysql:
   DbDsn:
 

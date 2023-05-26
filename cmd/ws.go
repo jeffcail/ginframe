@@ -7,9 +7,9 @@ import (
 	"github.com/jeffcail/ginframe/internel/router"
 )
 
-// HttpServe init
-func HttpServe() error {
+// WebsocketServer websocket服务
+func WebsocketServer() error {
 	r := gin.Default()
-	router.ApiRouter(r)
-	return r.Run(fmt.Sprintf("%s%s", ":", global.Config.Http.BindPort))
+	router.WsRouter(r)
+	return r.Run(fmt.Sprintf("%s%s", ":", global.Config.Websocket.BindPort))
 }

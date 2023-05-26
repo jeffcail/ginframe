@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"github.com/jeffcail/ginframe/common/global"
 	"github.com/jeffcail/ginframe/core/config"
+	"log"
 	"os"
 )
 
@@ -54,5 +55,23 @@ func loadRemoteConfig() {
 
 // Init 项目初始化
 func Init() {
-	HttpServe()
+	errs := make(chan error)
+	go func() {
+		err = HttpServe()
+		if err != nil {
+			errs <- err
+		}
+	}()
+
+	go func() {
+		err = WebsocketServer()
+		if err != nil {
+			errs <- err
+		}
+	}()
+
+	select {
+	case err = <-errs:
+		log.Fatalf("Run server err: %v")
+	}
 }

@@ -10,17 +10,23 @@ import "sync"
 
 // GoAppConfig 框架应用配置
 type GoAppConfig struct {
-	GinAppDebug string `json:"gin_app_debug"`
-	GinAppName  string `json:"gin_app_name"`
-	Http        Http   `json:"http"`
-	Mysql       Mysql  `json:"mysql"`
-	Redis       Redis  `json:"redis"`
+	GinAppDebug string    `json:"gin_app_debug"`
+	GinAppName  string    `json:"gin_app_name"`
+	Http        Http      `json:"http"`
+	Websocket   Websocket `json:"websocket"`
+	Mysql       Mysql     `json:"mysql"`
+	Redis       Redis     `json:"redis"`
 }
 
 // Http http服务配置
 type Http struct {
 	BindPort string `json:"bind_port"`
 	LogPath  string `json:"log_path"`
+}
+
+// Websocket Websocket服务配置
+type Websocket struct {
+	BindPort string `json:"bind_port"`
 }
 
 // Mysql 数据库配置
