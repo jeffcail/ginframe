@@ -57,6 +57,7 @@ func Init() {
 	errs := make(chan error)
 	go func() {
 		InitDb()
+		InitLog()
 		err = HttpServe()
 		if err != nil {
 			errs <- err

@@ -2,6 +2,7 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/jeffcail/ginframe/core/logger"
 	"github.com/jeffcail/ginframe/internel/input"
 	out2 "github.com/jeffcail/ginframe/internel/out"
 	"github.com/jeffcail/ginframe/utils/enum"
@@ -20,6 +21,8 @@ func Ping(c *gin.Context) {
 		Name:    "test",
 		Content: "pong...",
 	}
+
+	logger.GinLogger.Info("测试日志能打印出来吗？")
 
 	enum.Result.Success(c, out)
 }

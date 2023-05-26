@@ -13,6 +13,7 @@
       - [5. gorm](#gorm)
       - [6. redis](#redis)
       - [7. redis](#Mongo)
+      - [8. uber.zap.log](#uber.zap.log)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -66,3 +67,5 @@ websocket路由
 ### redis
 
 ### Mongo
+
+### uber.zap.log

@@ -3,7 +3,7 @@ GinAppName: ginframe
 
 Http:
   BindPort: 9091
-  LogPath: ./log/ginframe.log
+  LogPath: ./logs/ginframe.log
 
 Websocket:
   BindPort: 9092
