@@ -6,6 +6,8 @@
     - [目的及优势](#目的及优势)
     - [技术点对应文档](#技术点对应文档)
     - [职责](#职责)
+      - [1. 文件配置](#文件配置)
+      - [2. 路由](#路由)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -39,4 +41,11 @@ go run main.go
 * Echo: https://github.com/gin-gonic/gin
 
 ## 职责
-application.yml为主配置文件。ConfigRemote觉得是否启用远程配置，支持Nacos。
+快速开发、避免重复造轮子
+
+### 文件配置
+application.yml为主配置文件.ConfigRemote觉得是否启用远程配置，支持Nacos.
+config.yml 为应用配置
+
+### 路由
+http路由 

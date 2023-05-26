@@ -29,7 +29,7 @@ func init() {
 
 	switch global.AppConfig.ConfigRemote {
 	case false:
-		cf = fmt.Sprintf("%s%s", RootDir, "/config.yaml")
+		cf = fmt.Sprintf("%s%s", RootDir, "/config.yml")
 		global.NewGoAppConfig()
 		config.ParseConfig(cf, &global.Config)
 		break
