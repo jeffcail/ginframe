@@ -26,3 +26,6 @@ Mongo:
 
 LevelDb:
   Path: ./level_db/data
+
+Elastic:
+  Url:

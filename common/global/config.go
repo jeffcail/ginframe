@@ -21,6 +21,7 @@ type GlobalConfig struct {
 	Redis       Redis     `json:"redis"`
 	Mongo       Mongo     `json:"mongo"`
 	LevelDb     LevelDb   `json:"level_db"`
+	Elastic     Elastic   `json:"elastic"`
 }
 
 // Http http服务配置
@@ -60,6 +61,10 @@ type Mongo struct {
 
 type LevelDb struct {
 	Path string `json:"path"`
+}
+
+type Elastic struct {
+	Url string `json:"url"`
 }
 
 var (
