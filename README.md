@@ -70,3 +70,5 @@ websocket路由
 ### Mongo
 
 ### uber.zap.log
+
+### GOMAXPROCS
