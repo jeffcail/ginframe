@@ -12,7 +12,9 @@ Grpc:
   Port: 9093
 
 Mysql:
-  DbDsn:
+  DbDsn: root:123456@tcp(127.0.0.1:3306)/ginframe?charset=utf8mb4&parseTime=True&loc=Local
+  MaxOpenConns: 1000
+  MaxIdleConns: 200
 
 Redis:
   Username:

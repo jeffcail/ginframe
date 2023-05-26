@@ -10,6 +10,7 @@
       - [2. api路由](#api路由)
       - [3. websocket路由](#websocket路由)
       - [4. api返回统一格式](#api返回统一格式)
+      - [5. gorm](#gorm)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -57,3 +58,5 @@ websocket路由
 
 ### api返回统一格式
 成功、失败、分页
+
+### gorm

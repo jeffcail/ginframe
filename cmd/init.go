@@ -47,6 +47,8 @@ func init() {
 		break
 	}
 
+	InitDb()
+
 }
 
 func loadRemoteConfig(ip string, port int, cfg string, group string, configs interface{}) {

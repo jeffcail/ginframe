@@ -39,7 +39,9 @@ type Grpc struct {
 
 // Mysql 数据库配置
 type Mysql struct {
-	DbDsn string `json:"db_dsn"`
+	DbDsn        string `json:"db_dsn"`
+	MaxOpenConns int    `json:"max_open_conns"`
+	MaxIdleConns int    `json:"max_idle_conns"`
 }
 
 // Redis redis配置
