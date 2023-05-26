@@ -15,6 +15,7 @@
       - [7. redis](#Mongo)
       - [8. uber.zap.log](#uber.zap.log)
       - [9. GOMAXPROCS](#GOMAXPROCS)
+      - [10. httprequest](#httprequest)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -72,3 +73,6 @@ websocket路由
 ### uber.zap.log
 
 ### GOMAXPROCS
+
+### httprequest
+http请求. GET、POST带header头和参数
