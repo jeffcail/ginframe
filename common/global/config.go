@@ -20,6 +20,7 @@ type GlobalConfig struct {
 	Mysql       Mysql     `json:"mysql"`
 	Redis       Redis     `json:"redis"`
 	Mongo       Mongo     `json:"mongo"`
+	LevelDb     LevelDb   `json:"level_db"`
 }
 
 // Http http服务配置
@@ -55,6 +56,10 @@ type Redis struct {
 // Mongo mongo配置
 type Mongo struct {
 	Addr string `json:"addr"`
+}
+
+type LevelDb struct {
+	Path string `json:"path"`
 }
 
 var (

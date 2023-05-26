@@ -7,4 +7,5 @@ func InitDb() {
 	db.InitDb()
 	db.InitRedisClient()
 	//db.InitMongo()
+	db.InitLevelDb()
 }

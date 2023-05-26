@@ -23,3 +23,6 @@ Redis:
 
 Mongo:
   Addr: mongodb://test:123456@127.0.0.1:27017/ginframe
+
+LevelDb:
+  Path: ./level_db/data

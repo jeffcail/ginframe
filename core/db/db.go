@@ -6,8 +6,10 @@ import (
 	"fmt"
 	"github.com/jeffcail/ginframe/common/global"
 	_gorm "github.com/jeffcail/ginframe/pkg/gorm"
+	_leveldb "github.com/jeffcail/ginframe/pkg/leveldb"
 	_mongo "github.com/jeffcail/ginframe/pkg/mongo"
 	_redis "github.com/jeffcail/ginframe/pkg/redis"
+	leveldb1 "github.com/jeffcail/leveldb"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -20,6 +22,7 @@ var (
 	err error
 	Rd  *redis.Client
 	mg  *mongo.Client
+	Ldb *leveldb1.LevelDB
 )
 
 func InitDb() {
@@ -124,4 +127,9 @@ func (mc *mongoClient) DeleteOneRecord(db string, collection string, filter map[
 		return c.DeleteOne(context.TODO(), filter)
 	}
 	return
+}
+
+// InitLevelDb init level db
+func InitLevelDb() {
+	Ldb = _leveldb.InitLevelDb()
 }
