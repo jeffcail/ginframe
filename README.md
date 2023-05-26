@@ -18,6 +18,7 @@
       - [10. httprequest](#httprequest)
       - [11. leveldb](#leveldb)
       - [12. ElasticSearch](#ElasticSearch)
+      - [13. AES](#AES加密)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -82,3 +83,6 @@ http请求. GET、POST带header头和参数
 ### leveldb
 
 ### ElasticSearch
+
+### AES
+可用于api接口参数加密

@@ -22,6 +22,7 @@ type GlobalConfig struct {
 	Mongo       Mongo     `json:"mongo"`
 	LevelDb     LevelDb   `json:"level_db"`
 	Elastic     Elastic   `json:"elastic"`
+	Aes         Aes       `json:"aes"`
 }
 
 // Http http服务配置
@@ -65,6 +66,11 @@ type LevelDb struct {
 
 type Elastic struct {
 	Url string `json:"url"`
+}
+
+type Aes struct {
+	Key    string `json:"key"`
+	Secret string `json:"secret"`
 }
 
 var (

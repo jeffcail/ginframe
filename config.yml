@@ -29,3 +29,7 @@ LevelDb:
 
 Elastic:
   Url:
+
+Aes:
+  Key: bGcGfWb3Kg2s4gcG
+  Secret: aebksHkG4jAEk2Ag
