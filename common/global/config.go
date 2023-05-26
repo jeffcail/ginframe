@@ -46,8 +46,9 @@ type Mysql struct {
 
 // Redis redis配置
 type Redis struct {
-	Username string `json:"username"`
+	Addr     string `json:"addr"`
 	Password string `json:"password"`
+	Db       int    `json:"db"`
 }
 
 var (

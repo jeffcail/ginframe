@@ -11,6 +11,7 @@
       - [3. websocket路由](#websocket路由)
       - [4. api返回统一格式](#api返回统一格式)
       - [5. gorm](#gorm)
+      - [6. redis](#redis)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -60,3 +61,5 @@ websocket路由
 成功、失败、分页
 
 ### gorm
+
+### redis

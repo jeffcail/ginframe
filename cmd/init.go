@@ -46,9 +46,6 @@ func init() {
 		loadRemoteConfig(*ip, *port, *cfg, *group, &global.Config)
 		break
 	}
-
-	InitDb()
-
 }
 
 func loadRemoteConfig(ip string, port int, cfg string, group string, configs interface{}) {
@@ -59,6 +56,7 @@ func loadRemoteConfig(ip string, port int, cfg string, group string, configs int
 func Init() {
 	errs := make(chan error)
 	go func() {
+		InitDb()
 		err = HttpServe()
 		if err != nil {
 			errs <- err

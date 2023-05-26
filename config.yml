@@ -17,5 +17,6 @@ Mysql:
   MaxIdleConns: 200
 
 Redis:
-  Username:
-  Password:
+  Addr: 127.0.0.1:6379
+  Password: 123456
+  Db: 0
