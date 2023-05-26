@@ -9,5 +9,6 @@ import (
 func ApiRouter(r *gin.Engine) {
 
 	r.GET("/ping", handler.Ping)
+	r.GET("/list", handler.PagePagination)
 
 }

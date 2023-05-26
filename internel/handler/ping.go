@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jeffcail/ginframe/internel/input"
 	out2 "github.com/jeffcail/ginframe/internel/out"
-	"net/http"
+	"github.com/jeffcail/ginframe/utils/enum"
 )
 
 // Ping test router
@@ -12,11 +12,8 @@ func Ping(c *gin.Context) {
 	var param input.PingInput
 	err := c.Bind(&param)
 	if err != nil {
-		c.JSON(http.StatusOK, gin.H{
-			"status": 1000,
-			"msg":    err,
-			"data":   nil,
-		})
+		enum.Result.Error(c, enum.ApiCode.FAILED, enum.ApiCode.GetMessage(enum.ApiCode.FAILED))
+		return
 	}
 
 	out := &out2.PingOutput{
@@ -24,9 +21,12 @@ func Ping(c *gin.Context) {
 		Content: "pong...",
 	}
 
-	c.JSON(http.StatusOK, gin.H{
-		"status": 2000,
-		"msg":    "success",
-		"data":   out,
-	})
+	enum.Result.Success(c, out)
+}
+
+// PagePagination pagination
+func PagePagination(c *gin.Context) {
+	data := []string{"apple", "orange", "banana"}
+	list := enum.PageL.Pagination(3, data)
+	enum.Result.Success(c, list)
 }
