@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/jeffcail/ginframe/common/global"
+	_process "github.com/jeffcail/ginframe/common/process"
 	"github.com/jeffcail/ginframe/core/config"
 	"log"
 	"os"
@@ -34,6 +35,10 @@ func init() {
 	appConf := fmt.Sprintf("%s%s", RootDir, "/application.yml")
 	global.NewApplicationConfig()
 	config.ParseConfig(appConf, global.AppConfig)
+
+	if global.AppConfig.IsEnableGOMAXPROCS {
+		_process.GroRuntimeMaxCpu()
+	}
 
 	switch global.AppConfig.ConfigRemote {
 	case false:

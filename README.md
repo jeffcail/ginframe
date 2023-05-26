@@ -14,6 +14,7 @@
       - [6. redis](#redis)
       - [7. redis](#Mongo)
       - [8. uber.zap.log](#uber.zap.log)
+      - [9. GOMAXPROCS](#GOMAXPROCS)
 # 关于我
 执着于理想，纯粹与当下...
 

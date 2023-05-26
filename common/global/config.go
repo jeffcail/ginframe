@@ -72,7 +72,8 @@ func new() {
 }
 
 type Application struct {
-	ConfigRemote bool `json:"config_remote"`
+	ConfigRemote       bool `json:"config_remote"`
+	IsEnableGOMAXPROCS bool `json:"is_enable_gomaxprocs"`
 }
 
 func NewApplicationConfig() {
