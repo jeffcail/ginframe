@@ -19,6 +19,7 @@
       - [11. leveldb](#leveldb)
       - [12. ElasticSearch](#ElasticSearch)
       - [13. AES](#AES)
+      - [14. 加密](#加密)
 # 关于我
 执着于理想，纯粹与当下...
 
@@ -86,3 +87,6 @@ http请求. GET、POST带header头和参数
 
 ### AES
 可用于api接口参数加密
+
+### 加密
+md5加密 、sha256加密 、sha512加密 、文件md5加密 、 （密码+盐）hash加密(可以用于加密登录密码).
