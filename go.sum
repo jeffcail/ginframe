@@ -193,6 +193,8 @@ github.com/hashicorp/hcl v1.0.0/go.mod h1:E5yfLk+7swimpb2L/Alb/PJmXilQ/rhwaUYs4T
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
 github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
+github.com/jeffcail/gomcs v0.0.0-20230523095844-a00c7537426a h1:UtnC9yydWADWYfjASaUQCDrS/GoVRSaFJizGmrFPHdM=
+github.com/jeffcail/gomcs v0.0.0-20230523095844-a00c7537426a/go.mod h1:ziBPU0oLpKcdPxVmvOrutpqBoBkHHmfdcqxQe/qYuSM=
 github.com/jeffcail/gorequest v0.0.0-20230523095137-9809d4f45ca5 h1:Kl37Oxj9XoNNTL49djSDnyBG7u4lV0i1rH6+F7uFF0c=
 github.com/jeffcail/gorequest v0.0.0-20230523095137-9809d4f45ca5/go.mod h1:sDi56Xf9ip5NI/pYhJgv8R39J52trtPYqgChSeYhsp0=
 github.com/jeffcail/leveldb v1.0.0 h1:gLgeYs3bGEYj12l41cmgjyCacpINzQEcOYO2f/wwmhs=
