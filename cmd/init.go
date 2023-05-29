@@ -63,7 +63,7 @@ func Init() {
 	go func() {
 		InitDb()
 		InitLog()
-		InitEs()
+		//InitEs()
 		err = HttpServe()
 		if err != nil {
 			errs <- err
