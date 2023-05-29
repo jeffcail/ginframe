@@ -17,7 +17,7 @@ Mysql:
   MaxIdleConns: 200
 
 Redis:
-  Addr: 127.0.0.1:6379
+  Addr: 127.0.0.1:7379
   Password: 123456
   Db: 0
 
@@ -28,7 +28,7 @@ LevelDb:
   Path: ./level_db/data
 
 Elastic:
-  Url:
+  Url: http://localhost:9200
 
 Aes:
   Key: bGcGfWb3Kg2s4gcG
