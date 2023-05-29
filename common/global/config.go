@@ -8,7 +8,10 @@
 
 package global
 
-import "sync"
+import (
+	"sync"
+	"time"
+)
 
 // GlobalConfig 框架应用配置
 type GlobalConfig struct {
@@ -23,6 +26,7 @@ type GlobalConfig struct {
 	LevelDb     LevelDb   `json:"level_db"`
 	Elastic     Elastic   `json:"elastic"`
 	Aes         Aes       `json:"aes"`
+	Jwt         Jwt       `json:"jwt"`
 }
 
 // Http http服务配置
@@ -71,6 +75,11 @@ type Elastic struct {
 type Aes struct {
 	Key    string `json:"key"`
 	Secret string `json:"secret"`
+}
+
+type Jwt struct {
+	Expire time.Duration `json:"expire"`
+	Secret string        `json:"secret"`
 }
 
 var (

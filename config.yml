@@ -33,3 +33,7 @@ Elastic:
 Aes:
   Key: bGcGfWb3Kg2s4gcG
   Secret: aebksHkG4jAEk2Ag
+
+Jwt:
+  Expire: 3600
+  Secret: gin-frame

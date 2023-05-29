@@ -39,7 +39,7 @@ func (res *result) Success(c *gin.Context, data ...interface{}) {
 func (res *result) Error(c *gin.Context, code uint, msg string) {
 	res.Time = time.Now()
 	res.Code = code
-	res.Msg = ApiCode.GetMessage(code)
+	res.Msg = msg
 	res.Data = gin.H{}
 	c.JSON(http.StatusOK, res)
 }
