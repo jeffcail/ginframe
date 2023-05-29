@@ -5,6 +5,9 @@ Http:
   BindPort: 9091
   LogPath: ./logs/ginframe.log
 
+Rpc:
+  Listener: 127.0.0.1:9094
+
 Websocket:
   BindPort: 9092
 

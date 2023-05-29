@@ -8,6 +8,7 @@ import (
 	"github.com/jeffcail/ginframe/common/global"
 	_process "github.com/jeffcail/ginframe/common/process"
 	"github.com/jeffcail/ginframe/core/config"
+	_rpc "github.com/jeffcail/ginframe/internel/admin/rpc"
 	"log"
 	"os"
 )
@@ -72,6 +73,13 @@ func Init() {
 
 	go func() {
 		err = WebsocketServer()
+		if err != nil {
+			errs <- err
+		}
+	}()
+
+	go func() {
+		err = _rpc.RpcServer()
 		if err != nil {
 			errs <- err
 		}

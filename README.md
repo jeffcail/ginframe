@@ -7,22 +7,23 @@
     - [职责](#职责)
       - [1. 文件配置](#文件配置)
       - [2. api路由](#api路由)
-      - [3. websocket路由](#websocket路由)
-      - [4. api返回统一格式](#api返回统一格式)
-      - [5. gorm](#gorm)
-      - [6. redis](#redis)
-      - [7. Mongo](#Mongo)
-      - [8. uber.zap.log](#uber.zap.log)
-      - [9. GOMAXPROCS](#GOMAXPROCS)
-      - [10. httprequest](#httprequest)
-      - [11. leveldb](#leveldb)
-      - [12. ElasticSearch](#ElasticSearch)
-      - [13. AES](#AES)
-      - [14. 加密](#加密)
-      - [15. 动态搜索+分页](#动态搜索+分页)
-      - [16. map合并和并发安全map](#map合并和并发安全map)
-      - [17. 时间处理工具类](#时间处理工具类)
-      - [18. 敏感词识别](#敏感词识别)
+      - [3. rpc](#rpc)
+      - [4. websocket路由](#websocket路由)
+      - [5. api返回统一格式](#api返回统一格式)
+      - [6. gorm](#gorm)
+      - [7. redis](#redis)
+      - [8. Mongo](#Mongo)
+      - [9. uber.zap.log](#uber.zap.log)
+      - [10. GOMAXPROCS](#GOMAXPROCS)
+      - [11. httprequest](#httprequest)
+      - [12. leveldb](#leveldb)
+      - [13. ElasticSearch](#ElasticSearch)
+      - [14. AES](#AES)
+      - [15. 加密](#加密)
+      - [16. 动态搜索+分页](#动态搜索+分页)
+      - [17. map合并和并发安全map](#map合并和并发安全map)
+      - [18. 时间处理工具类](#时间处理工具类)
+      - [19. 敏感词识别](#敏感词识别)
       - [20. 邮件类工具](#邮件类工具)
       - [21. kafka生产者、消费者](#kafka生产者、消费者)
       - [22. etcd客户端连接初始化 (写入、读取、修改、删除)](#etcd客户端连接初始化 (写入、读取、修改、删除))
@@ -69,6 +70,8 @@ config.yml 为应用配置
 
 ### api路由
 http路由 
+
+### rpc
 
 ### websocket路由
 websocket路由

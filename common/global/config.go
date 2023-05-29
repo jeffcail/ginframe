@@ -20,6 +20,7 @@ type GlobalConfig struct {
 	Http        Http      `json:"http"`
 	Websocket   Websocket `json:"websocket"`
 	Grpc        Grpc      `json:"grpc"`
+	Rpc         Rpc       `json:"rpc"`
 	Mysql       Mysql     `json:"mysql"`
 	Redis       Redis     `json:"redis"`
 	Mongo       Mongo     `json:"mongo"`
@@ -43,6 +44,11 @@ type Websocket struct {
 // Grpc Grpc配置
 type Grpc struct {
 	Port string `json:"port"`
+}
+
+// Rpc Rpc配置
+type Rpc struct {
+	Listener string `json:"listener"`
 }
 
 // Mysql 数据库配置
