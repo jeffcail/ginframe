@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/jeffcail/ginframe/common/global"
-	"github.com/jeffcail/ginframe/internel/router"
+	"github.com/jeffcail/ginframe/internel/admin/router"
 )
 
 // HttpServe init

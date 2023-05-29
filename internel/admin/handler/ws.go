@@ -3,7 +3,7 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
-	"github.com/jeffcail/ginframe/internel/ws"
+	"github.com/jeffcail/ginframe/internel/admin/ws"
 	"log"
 	"time"
 )

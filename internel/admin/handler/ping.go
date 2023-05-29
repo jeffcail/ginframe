@@ -3,8 +3,8 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/jeffcail/ginframe/core/logger"
-	"github.com/jeffcail/ginframe/internel/input"
-	out2 "github.com/jeffcail/ginframe/internel/out"
+	"github.com/jeffcail/ginframe/internel/admin/input"
+	out2 "github.com/jeffcail/ginframe/internel/admin/out"
 	"github.com/jeffcail/ginframe/utils/enum"
 )
 
