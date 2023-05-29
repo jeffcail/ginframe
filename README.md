@@ -4,7 +4,6 @@
     - [简介](#简介)
     - [安装](#安装)
     - [目的及优势](#目的及优势)
-    - [技术点对应文档](#技术点对应文档)
     - [职责](#职责)
       - [1. 文件配置](#文件配置)
       - [2. api路由](#api路由)
@@ -60,10 +59,6 @@ go run main.go
 * 快速上手、快速开发、快速交付
 * 高性能、高扩展，避免重复造轮子
 
-## 技术栈和对应的包
-* viper: https://github.com/spf13/viper
-* Nacos: https://nacos.io/zh-cn/
-* Echo: https://github.com/gin-gonic/gin
 
 ## 职责
 快速开发、避免重复造轮子
