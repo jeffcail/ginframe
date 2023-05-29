@@ -35,5 +35,5 @@ Aes:
   Secret: aebksHkG4jAEk2Ag
 
 Jwt:
-  Expire: 3600
+  Expire: 24     # 小时
   Secret: gin-frame

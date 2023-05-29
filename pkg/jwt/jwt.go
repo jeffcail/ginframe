@@ -32,10 +32,10 @@ func NewJwtInstance(expire time.Duration, secret string) *JwtClaims {
 }
 
 // GenerateToken 签发Token
-func (j *JwtClaims) GenerateToken() (string, error) {
+func (j *JwtClaims) GenerateToken(claims *JwtClaims) (string, error) {
 	c := JwtClaims{
-		ID:       j.ID,
-		Username: j.Username,
+		ID:       claims.ID,
+		Username: claims.Username,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(EXPIRE).Unix(),
 		},

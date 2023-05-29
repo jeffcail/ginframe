@@ -3,6 +3,7 @@ package auth
 import (
 	"errors"
 	"fmt"
+	"github.com/dgrijalva/jwt-go"
 	"github.com/jeffcail/ginframe/common/global"
 	"github.com/jeffcail/ginframe/core/logger"
 	"github.com/jeffcail/ginframe/internel/admin/daos/auth"
@@ -10,6 +11,7 @@ import (
 	out2 "github.com/jeffcail/ginframe/internel/admin/out"
 	_jwt "github.com/jeffcail/ginframe/pkg/jwt"
 	"github.com/jeffcail/ginframe/utils/encry"
+	"time"
 )
 
 func LoginService(param *input.LoginInput) (*out2.LoginOut, error) {
@@ -25,8 +27,15 @@ func LoginService(param *input.LoginInput) (*out2.LoginOut, error) {
 		return nil, errors.New(fmt.Sprintf("username: %s 密码错误", param.Username))
 	}
 
-	claims := _jwt.NewJwtInstance(global.Config.Jwt.Expire, global.Config.Jwt.Secret)
-	token, err := claims.GenerateToken()
+	expire := time.Hour * global.Config.Jwt.Expire
+	instance := _jwt.NewJwtInstance(expire, global.Config.Jwt.Secret)
+	claims := &_jwt.JwtClaims{
+		ID:             admin.Id,
+		Username:       admin.Username,
+		StandardClaims: jwt.StandardClaims{},
+	}
+
+	token, err := instance.GenerateToken(claims)
 	if err != nil {
 		logger.GinLogger.Error(fmt.Sprintf("username: %s 签发token失败", param.Username))
 		return nil, errors.New(fmt.Sprintf("username: %s 签发token失败", param.Username))

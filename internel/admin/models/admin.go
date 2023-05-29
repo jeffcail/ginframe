@@ -2,6 +2,7 @@ package models
 
 import (
 	"github.com/jeffcail/ginframe/core/db"
+	"github.com/jeffcail/ginframe/utils/orm"
 	"time"
 )
 
@@ -46,4 +47,23 @@ func (a *Admin) FindAdminByNickname(nickname string) (admin *Admin, err error) {
 		return
 	}
 	return
+}
+
+// List 管理员账号列表
+func (a *Admin) List(page, pageSize int64) (int64, []*Admin, error) {
+	page = 1
+	pageSize = 10
+
+	// 项目配置的默认分页
+	s := make(map[string]interface{})
+	s["page"] = 1
+	s["pageSize"] = 10
+
+	var count int64
+	admins := make([]*Admin, 0)
+	err := db.Db.Table("admin").Scopes(orm.Paginate(page, pageSize, s)).Count(&count).Find(&admins).Error
+	if err != nil {
+		return 0, nil, err
+	}
+	return count, admins, nil
 }
