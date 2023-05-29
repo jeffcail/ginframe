@@ -12,7 +12,7 @@
       - [4. api返回统一格式](#api返回统一格式)
       - [5. gorm](#gorm)
       - [6. redis](#redis)
-      - [7. redis](#Mongo)
+      - [7. Mongo](#Mongo)
       - [8. uber.zap.log](#uber.zap.log)
       - [9. GOMAXPROCS](#GOMAXPROCS)
       - [10. httprequest](#httprequest)
