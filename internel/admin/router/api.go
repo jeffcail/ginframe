@@ -31,5 +31,6 @@ func setAdminRouter(v1Group *gin.RouterGroup) {
 	accountHandler := new(account.AccountHandler)
 	admin := v1Group.Group("/admin")
 	admin.Use(middlewares.AuthMiddleware())
+	admin.Use(middlewares.CheckAdminAccountIsEnable())
 	admin.GET("/list", accountHandler.List)
 }

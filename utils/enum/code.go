@@ -6,6 +6,7 @@ type codes struct {
 	PARAMERR         uint
 	TOKENISNOTEXISTS uint
 	TOKENISVALID     uint
+	ADMINISDISABLE   uint
 
 	MESSAGE map[uint]string
 }
@@ -16,6 +17,7 @@ var ApiCode = &codes{
 	PARAMERR:         10001,
 	TOKENISNOTEXISTS: 401,
 	TOKENISVALID:     402,
+	ADMINISDISABLE:   403,
 }
 
 func InitMapCode() {
@@ -25,6 +27,7 @@ func InitMapCode() {
 		ApiCode.PARAMERR:         "参数错误",
 		ApiCode.TOKENISNOTEXISTS: "token不存在,非法请求",
 		ApiCode.TOKENISVALID:     "token无效,非法请求",
+		ApiCode.ADMINISDISABLE:   "账号被禁用，请联系管理员处理",
 	}
 }
 
