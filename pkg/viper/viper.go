@@ -1,9 +1,9 @@
 package _viper
 
 import (
-	"github.com/nacos-group/nacos-sdk-go/v2/clients"
-	"github.com/nacos-group/nacos-sdk-go/v2/common/constant"
-	"github.com/nacos-group/nacos-sdk-go/v2/vo"
+	"github.com/nacos-group/nacos-sdk-go/clients"
+	"github.com/nacos-group/nacos-sdk-go/common/constant"
+	"github.com/nacos-group/nacos-sdk-go/vo"
 	"github.com/spf13/viper"
 	"strings"
 )
@@ -25,11 +25,7 @@ func LoadCoreConfig(ip string, port int, cfg string, group string, config interf
 		{IpAddr: ip, Port: uint64(port)},
 	}
 	nacosClient, err := clients.NewConfigClient(vo.NacosClientParam{
-		ClientConfig: &constant.ClientConfig{
-			NamespaceId:         "",
-			TimeoutMs:           5000,
-			NotLoadCacheAtStart: true,
-		},
+		ClientConfig:  &constant.ClientConfig{TimeoutMs: 5000},
 		ServerConfigs: serverConfigs,
 	})
 	if err != nil {

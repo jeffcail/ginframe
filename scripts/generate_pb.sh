@@ -1,0 +1,1 @@
+cd ../internel/admin/proto && protoc --go_out=plugins=grpc:../pb *.proto

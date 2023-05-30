@@ -22,7 +22,7 @@ var (
 var (
 	ip    = flag.String("ip", "127.0.0.1", "The nacos of ip address")
 	port  = flag.Int("p", 7848, "The nacos of port")
-	cfg   = flag.String("c", "config.yml", "The nacos of Data ID")
+	cfg   = flag.String("c", "gin-frame.yml", "The nacos of Data ID")
 	group = flag.String("g", "ginframe", "The nacos of Group")
 )
 

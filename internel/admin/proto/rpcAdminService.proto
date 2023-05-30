@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "../pb";
+
+message GetAdminInfoRequest {
+    string id = 1;
+}
+
+message GetAdminInfoResponse {
+  int64 id = 1;
+  string username = 2;
+  string nickname = 3;
+  string phone = 4;
+  string email = 5;
+  string createdAt = 6;
+}
+
+service RpcAminService {
+  rpc GetAdminInfo(GetAdminInfoRequest) returns(GetAdminInfoResponse){}
+}
