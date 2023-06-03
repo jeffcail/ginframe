@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/jeffcail/ginframe/utils/maps"
+	"github.com/jeffcail/ginframe/server-common/utils/maps"
 	"testing"
 	"time"
 )

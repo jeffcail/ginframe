@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/jeffcail/ginframe/utils/email"
+	"github.com/jeffcail/ginframe/server-common/utils/email"
 	"os"
 	"testing"
 )

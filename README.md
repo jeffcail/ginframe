@@ -2,6 +2,7 @@
 - [关于我](#关于我)
 - [echoframe](#ginframe)
     - [简介](#简介)
+    - [目录结构](#目录结构)
     - [安装](#安装)
     - [目的及优势](#目的及优势)
     - [职责](#职责)
@@ -42,6 +43,75 @@
 
 ## 简介
 基于echo框架，搭建一个快速开发的脚手架。
+
+## 目录结构
+```markdown
+server-common                         -- 服务公共模块
+    config                            -- 解析配置方法
+    const                             -- 全局常量
+    driver                            -- 全局驱动
+    nacosRF                           -- 全局nacos配置
+    pkg                               -- 全局公共包
+        gorm
+        httprequest
+        jwt
+        leveldb
+        mongo
+        redis
+        uber
+        viper
+        wetcd
+        wkafka
+    process                           -- cpu核心
+    servers                           -- gprc 服务发现
+    utils                             -- 全局工具类
+        email                         -- 发送邮件
+        encry                         -- 加密
+        enum                          -- api统一分装返回
+        ip                            -- ip工具
+        maps                          -- map工具
+        orm                           -- gorm动态搜索、分页
+        regmatch                      -- 正则匹配
+        slice                         -- 切片操作
+        wordsfilter                   -- 敏感词过滤
+        wtime                         -- 时间处理
+server-user                           -- 用户服务
+    boot                              -- 启动目录
+        db.go
+        grpc.go
+        http.go
+        init.go
+        log.go
+        ws.go
+    cachedb                           -- 缓存操作
+    core                              -- 核心目录
+        db.go
+    daos                              -- daos
+    global                            -- user服务全局配置
+    grpcservices                      -- grpc services
+    handler                           -- 控制器
+    input                             -- 入参
+    middlewares                       -- 中间件
+    models                            -- 模型
+    out                               -- 出参映射
+    pb                                -- protobuf生成的文件目录
+    proto                             -- protobuf文件目录
+    router                            -- 路由
+        api.go
+        ws.go
+    rpc                               -- rpc
+    scripts                           -- 脚本
+    service                           -- 服务层
+    ulogger                           -- 服务日志
+    ws                                -- websocket
+    main.go                           -- 入口文件
+server-test                           -- 测试服务
+......                                -- 其他服务
+.gitignore
+go.mod                                -- mod包管理文件
+LICENSE
+README.md
+```
 
 ## 安装
 安装完之后名字ginframe可改，可根据自己的需求精简或者添加架子结构。也可直接使用

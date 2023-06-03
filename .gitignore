@@ -2,9 +2,9 @@
 .DS_Store
 .idea
 .vscode
-main
-main.exe
 .git
-logs
-level_db
+*logs
+*level_db
+*gcache
 cache
+log
