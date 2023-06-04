@@ -2,7 +2,7 @@ package boot
 
 import (
 	"fmt"
-	"github.com/jeffcail/ginframe/server-common/cservices"
+	"github.com/jeffcail/ginframe/server-common/const"
 	"github.com/jeffcail/ginframe/server-user/global"
 	"github.com/jeffcail/ginframe/server-user/grpcservices/services"
 	"github.com/jeffcail/ginframe/server-user/pb"
@@ -20,7 +20,7 @@ func RunGrpcServer() error {
 	s := grpc.NewServer()
 	// 注册心跳
 	healthServer := health.NewServer()
-	healthServer.SetServingStatus(cservices.HEALTHCHECK_SERVICE, healthpb.HealthCheckResponse_SERVING)
+	healthServer.SetServingStatus(_const.HEALTHCHECK_SERVICE, healthpb.HealthCheckResponse_SERVING)
 	healthpb.RegisterHealthServer(s, healthServer)
 
 	// 注册服务

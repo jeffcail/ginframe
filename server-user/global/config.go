@@ -17,21 +17,21 @@ var Config *GlobalConfig
 
 // GlobalConfig 框架应用配置
 type GlobalConfig struct {
-	IsEnableGOMAXPROCS bool                `json:"is_enable_gomaxprocs"`
-	GinAppDebug        string              `json:"gin_app_debug"`
-	GinAppName         string              `json:"gin_app_name"`
-	Http               Http                `json:"http"`
-	Websocket          Websocket           `json:"websocket"`
-	Grpc               Grpc                `json:"grpc"`
-	Nacos              nacosRF.NacosConfig `json:"nacos"`
-	Rpc                Rpc                 `json:"rpc"`
-	Mysql              Mysql               `json:"mysql"`
-	Redis              Redis               `json:"redis"`
-	Mongo              Mongo               `json:"mongo"`
-	LevelDb            LevelDb             `json:"level_db"`
-	Elastic            Elastic             `json:"elastic"`
-	Aes                Aes                 `json:"aes"`
-	Jwt                Jwt                 `json:"jwt"`
+	IsEnableGOMAXPROCS bool                 `json:"is_enable_gomaxprocs"`
+	GinAppDebug        string               `json:"gin_app_debug"`
+	GinAppName         string               `json:"gin_app_name"`
+	Http               Http                 `json:"http"`
+	Websocket          Websocket            `json:"websocket"`
+	Grpc               Grpc                 `json:"grpc"`
+	Nacos              *nacosRF.NacosConfig `json:"nacos"`
+	Rpc                Rpc                  `json:"rpc"`
+	Mysql              Mysql                `json:"mysql"`
+	Redis              Redis                `json:"redis"`
+	Mongo              Mongo                `json:"mongo"`
+	LevelDb            LevelDb              `json:"level_db"`
+	Elastic            Elastic              `json:"elastic"`
+	Aes                Aes                  `json:"aes"`
+	Jwt                Jwt                  `json:"jwt"`
 }
 
 // Http http服务配置
