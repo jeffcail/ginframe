@@ -5,10 +5,10 @@ import "github.com/jeffcail/ginframe/server-common/nacosRF"
 var TestConfig *GlobalConfig
 
 type GlobalConfig struct {
-	GinAppDebug string              `json:"gin_app_debug"`
-	Http        Http                `json:"http"`
-	Grpc        Grpc                `json:"grpc"`
-	Nacos       nacosRF.NacosConfig `json:"nacos"`
+	GinAppDebug string               `json:"gin_app_debug"`
+	Http        Http                 `json:"http"`
+	Grpc        Grpc                 `json:"grpc"`
+	Nacos       *nacosRF.NacosConfig `json:"nacos"`
 }
 
 // Http http服务配置

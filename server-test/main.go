@@ -43,7 +43,9 @@ func main() {
 			return
 		}
 		// 用户表id 为 1
-		info, err := userServiceClient.GetUserInfo(context.Background(), &pb.GetUserInfoRequest{Id: "1"})
+		info, err := userServiceClient.GetUserInfo(context.Background(), &pb.GetUserInfoRequest{
+			Id: "1",
+		})
 		if err != nil {
 			c.JSON(http.StatusOK, gin.H{
 				"code": 400,

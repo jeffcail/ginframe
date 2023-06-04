@@ -44,11 +44,11 @@ func GetUserRpcServer(index string) pb.RpcUserServiceClient {
 		go func() {
 			rpcUser.Do(func() {
 				nacosRF.NacosInstance.ListenInstance(serverName, func(server *nacosRF.ServerInfo) {
-					info, err = nacosRF.NacosInstance.FindOneInstance(serverName)
+					info, err := nacosRF.NacosInstance.FindOneInstance(serverName)
 					if err != nil {
 						return
 					}
-					conn, err = grpc.DialContext(context.Background(), fmt.Sprintf("%s:%s", info.Ip, info.Port),
+					conn, err := grpc.DialContext(context.Background(), fmt.Sprintf("%s:%s", info.Ip, info.Port),
 						grpc.WithInsecure(), grpc.WithDisableHealthCheck())
 					if err != nil {
 						return

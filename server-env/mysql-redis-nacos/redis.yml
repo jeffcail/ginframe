@@ -1,0 +1,8 @@
+version: "2"
+services:
+  redis:
+    container_name: redisd
+    image: redis:5.0.7
+    command: redis-server --requirepass 123456
+    ports:
+      - 7379:6379

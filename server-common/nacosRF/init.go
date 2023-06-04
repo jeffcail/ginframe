@@ -33,7 +33,7 @@ type nacosRF struct {
 var NacosInstance *nacosRF
 
 // InitNacos init Nacos
-func InitNacos(config NacosConfig) *nacosRF {
+func InitNacos(config *NacosConfig) *nacosRF {
 	//return &nacosRF{}
 	d := &nacosRF{}
 	clientConfig := constant.ClientConfig{

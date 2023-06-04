@@ -1,0 +1,19 @@
+version: '2'
+services:
+  mysql:
+    container_name: mysqld-master
+    image: mysql:8.0.19
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      TZ: Asia/Shanghai
+    command:
+      --server_id=1
+      --binlog_format=MIXED
+      --slow_query_log='ON'
+      --long_query_time=20
+      --character-set_server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+    ports:
+      - 3306:3306
+    volumes:
+      - /Users/cc/docker/mysql-redis-nacos/data/mysql:/var/lib/mysql
