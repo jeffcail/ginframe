@@ -120,9 +120,10 @@ git clone https://github.com/jeffcail/ginframe.git
 
 cd ginframe
 
-go mod tidy
+make env
 
-go run main.go
+make mod
+
 ```
 
 ## 目的及优势
