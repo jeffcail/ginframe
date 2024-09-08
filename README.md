@@ -1,6 +1,17 @@
+# ginframe
+> 基于Go语言gin框架搭建的可快速开发的微服务脚手架
+
+
+<a href="https://github.com/jeffcail/ginframe/releases">
+    <img src="https://img.shields.io/github/release/ginframe/releases.svg" alt="GitHub release">
+  </a>
+   <a href="https://github.com/jeffcail/ginframe/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+  </a>
+
 [TOC]- [关于我](#关于我)
 - [关于我](#关于我)
-- [echoframe](#ginframe)
+- [ginframe](#ginframe)
     - [简介](#简介)
     - [目录结构](#目录结构)
     - [安装](#安装)
@@ -35,7 +46,7 @@
       - [27. 常用正则表达式](#常用正则表达式)
       - [28. 数组切片去重](#数组切片去重)
 # 关于我
-执着于理想，纯粹与当下...
+21实际拾荒人
 
 # ginframe
 基于Go语言gin框架搭建的可快速开发的微服务脚手架
